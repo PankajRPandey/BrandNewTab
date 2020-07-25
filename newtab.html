@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+    <style>
+        body {
+            background-image: url("the_most_beautiful_road_in_the_world_2-wallpaper-1366x768.jpg");
+            background-color: #cccccc;
+            color: #fff;
+            font-family: system-ui, serif;
+        }
+
+        .parent {
+            display: grid;
+            place-items: center;
+
+            width: inherit;
+            height: 90vh;
+        }
+
+        .child {
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-size: 10rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="startTime()">
+    <div class="parent">
+        <div class="child" id="txt"></div>
+    </div>
+</body>
+
+</html>
