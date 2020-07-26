@@ -2,35 +2,18 @@
 <html>
 
 <head>
-    <script>
-        function startTime() {
-          var today = new Date();
-          var h = today.getHours();
-          var m = today.getMinutes();
-          var s = today.getSeconds();
-          m = checkTime(m);
-          s = checkTime(s);
-          document.getElementById('txt').innerHTML =
-          h + ":" + m + ":" + s;
-          var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-          return i;
-        }
-        </script>
+
     <style>
         body {
             background-image: url("the_most_beautiful_road_in_the_world_2-wallpaper-1366x768.jpg");
             background-color: #cccccc;
             color: #fff;
-            font-family: system-ui, serif;
+            font-family: 'Ubuntu';
         }
 
         .parent {
             display: grid;
             place-items: center;
-
             width: inherit;
             height: 90vh;
         }
@@ -38,16 +21,18 @@
         .child {
             padding: 0.5rem;
             border-radius: 10px;
-            font-size: 10rem;
+            font-size: 8rem;
             text-align: center;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;" rel="stylesheet" />
+
 </head>
 
-<body onload="startTime()">
+<body>
     <div class="parent">
         <div class="child" id="txt"></div>
     </div>
+    <script src="newtab.js"></script>
 </body>
-
 </html>

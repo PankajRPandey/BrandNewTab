@@ -14,5 +14,5 @@
   "chrome_url_overrides": {
 	"newtab":"newtab.html"
   },
-"permissions": ["tabs"]
+"permissions": ["activeTab"]
 }
