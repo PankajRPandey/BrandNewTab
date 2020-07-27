@@ -11,3 +11,7 @@ function startTime() {
     var t = setTimeout(startTime, 500);
 }
 window.onload = startTime;
+
+function getScreenResolution() {
+    return window.outerWidth + 'x' + window.outerHeight;
+}
