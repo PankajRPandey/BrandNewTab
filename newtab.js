@@ -10,8 +10,17 @@ function startTime() {
     document.getElementById('txt').innerHTML = strTime;
     var t = setTimeout(startTime, 500);
 }
-window.onload = startTime;
+window.onload = function() {
+    startTime();
+    setBackgroundWallpaper();
+}
 
 function getScreenResolution() {
     return window.outerWidth + 'x' + window.outerHeight;
 }
+
+function setBackgroundWallpaper() {
+    var res = getScreenResolution();
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/random/"+res+"')";
+}
+
