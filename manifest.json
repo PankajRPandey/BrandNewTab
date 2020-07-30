@@ -1,10 +1,10 @@
 {
   "name": "BrandNewTab",
-  "description": "AA chrome extension to replace and simplify the new tab",
+  "description": "A chrome extension to replace and simplify the new tab",
   "version": "1.0",
   "background": {
     "scripts": [
-      "background.js"
+      "js/background.js"
     ],
     "persistent": false
   },
