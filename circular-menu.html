@@ -3,7 +3,9 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    
+    body{
+      background-color: black;
+    }
 .circular-menu {
   position: fixed;
   bottom: 1em;
@@ -145,11 +147,11 @@
 /*
 * Transparent and opaque element
 */
-#circularMenu1 {
+#circularMenu {
   opacity: 0.25;
 }
 
-#circularMenu1:hover {
+#circularMenu:hover {
   opacity: 1.0;
 }
 
@@ -157,25 +159,9 @@
 </head>
 <body>
 
-<!-- <div id="circularMenu" class="circular-menu">
+<div id="circularMenu" class="circular-menu circular-menu-left">
 
   <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
-    <i class="fa fa-plus"></i>
-  </a>
-
-  <menu class="items-wrapper">
-    <a href="#" class="menu-item fa fa-facebook"></a>
-    <a href="#" class="menu-item fa fa-twitter"></a>
-    <a href="#" class="menu-item fa fa-google-plus"></a>
-    <a href="#" class="menu-item fa fa-linkedin"></a>
-  </menu>
-
-</div> -->
-
-
-<div id="circularMenu1" class="circular-menu circular-menu-left">
-
-  <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
     <i class="fa fa-bars"></i>
   </a>
 
