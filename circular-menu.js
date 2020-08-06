@@ -20,4 +20,9 @@ function generateRandomGradient() {
     document.body.style.background = gradient;
 }
 
+function toggleCircularMenu() {
+    document.getElementById('circularMenu').classList.toggle('active');
+}
+
 document.getElementById("bgGradient").addEventListener("click", generateRandomGradient);
+document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
