@@ -19,6 +19,9 @@ function toggleCircularMenu() {
     document.getElementById('circularMenu').classList.toggle('active');
 }
 
+window.onload = function() {
+    setRandomWallpaperBG();
+}
 
 function setRandomWallpaperBG() {
     document.body.style.backgroundImage = "url('')"; //perform page onload when button is clicked
@@ -29,6 +32,10 @@ function setRandomWallpaperBG() {
     document.body.style.backgroundImage = "url('https://source.unsplash.com/random/" + res + "')";
 }
 
+function refreshPage(){
+    window.location.reload();
+} 
+
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
-document.getElementById("bgWallpaper").addEventListener("click", setRandomWallpaperBG);
+document.getElementById("bgWallpaper").addEventListener("click", refreshPage);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
