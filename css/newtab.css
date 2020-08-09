@@ -3,7 +3,6 @@ body {
     background-color: #cccccc;
     color: #fff;
     font-family: 'Josefin Sans';
-    text-shadow: 2px 2px #C0C0C0;
 }
 
 .parent {
@@ -22,8 +21,10 @@ body {
 #clock {
     /*font-weight: bolder;*/
     font-size: 6rem;
+    text-shadow: 2px 2px #C0C0C0;
 }
 
 #greet {
     font-size: 3rem;
+    text-shadow: 2px 2px #C0C0C0;
 }
