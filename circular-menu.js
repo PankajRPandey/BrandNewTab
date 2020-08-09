@@ -24,7 +24,6 @@ window.onload = function() {
 }
 
 function setRandomWallpaperBG() {
-    document.body.style.backgroundImage = "url('')"; //perform page onload when button is clicked
     function getScreenResolution() {
         return window.outerWidth + 'x' + window.outerHeight;
     }
