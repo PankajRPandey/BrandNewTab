@@ -50,7 +50,9 @@ function setRandomWallpaperBG() {
         return window.outerWidth + 'x' + window.outerHeight;
     }
     let res = getScreenResolution();
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/random/" + res + "')";
+    fetch(`https://source.unsplash.com/random/${res}`).then((response) => {   
+        document.body.style.backgroundImage = `url('${response.url}')`;
+    });
 }
 
 function refreshPage(){
