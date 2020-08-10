@@ -3,13 +3,22 @@ body {
     background-color: #cccccc;
     color: #fff;
     font-family: 'Josefin Sans';
+    margin :0px;
 }
+
+/*90vh was causing issue with the bg
+as the container size was small the bg 
+color gradient appeared to 90% of viewport 
+and repeated color gradient again for remaining 10%
+Adding "margin:0px" to body and "box-sizing: border-box;"
+to container fixed the issue*/
 
 .parent {
     display: grid;
     place-items: center;
     width: inherit;
-    height: 90vh;
+    height: 100vh; /*was 90vh before*/
+    box-sizing: border-box;
 }
 
 .child {
