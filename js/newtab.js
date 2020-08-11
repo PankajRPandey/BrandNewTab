@@ -62,3 +62,10 @@ function refreshPage(){
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
 document.getElementById("bgWallpaper").addEventListener("click", refreshPage);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
+document.getElementById("bgPattern").addEventListener("click", myFunction);
+
+function myFunction() {
+    document.body.style = '';
+    var element = document.getElementById("myDiv");
+    element.classList.toggle("lined-paper");
+  }
