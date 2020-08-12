@@ -59,13 +59,23 @@ function refreshPage(){
     window.location.reload();
 } 
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setRandomPatternBG() {
+    document.body.style = '';
+    let patternNo = getRandomInt(1,3);
+    let element = document.getElementById("mainContent");
+    element.removeAttribute("class");
+    element.classList.add("pattern" + patternNo);
+}
+
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
 document.getElementById("bgWallpaper").addEventListener("click", refreshPage);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
-document.getElementById("bgPattern").addEventListener("click", myFunction);
+document.getElementById("bgPattern").addEventListener("click", setRandomPatternBG);
 
-function myFunction() {
-    document.body.style = '';
-    var element = document.getElementById("myDiv");
-    element.classList.toggle("lined-paper");
-  }
+
