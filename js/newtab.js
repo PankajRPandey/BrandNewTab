@@ -67,7 +67,7 @@ function getRandomInt(min, max) {
 
 function setRandomPatternBG() {
     document.body.style = '';
-    let patternNo = getRandomInt(1,10);
+    let patternNo = getRandomInt(1,16);
     let element = document.getElementById("mainContent");
     element.removeAttribute("class");
     element.classList.add("pattern" + patternNo);
