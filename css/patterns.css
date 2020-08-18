@@ -174,3 +174,21 @@ background-color: #840b2a;
     linear-gradient(335deg, #C90032 10px, transparent 10px),
     linear-gradient(155deg, #C90032 10px, transparent 10px);
 }
+
+.pattern17{ /*waves*/
+    background:
+    radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
+    background-color: slategray;
+    background-size:75px 100px;
+}
+
+.pattern18{ /*cross*/
+    background:
+    radial-gradient(circle, transparent 20%, red 20%, red 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, red 20%, red 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(black 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, black 8px, transparent 8px) -4px 0;
+    background-color: red;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
