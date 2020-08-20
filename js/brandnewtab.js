@@ -46,6 +46,8 @@ function toggleCircularMenu() {
 }
 
 function setRandomWallpaperBG() {
+    let element = document.getElementById("mainContent");
+    element.removeAttribute("class");
     function getScreenResolution() {
         return window.outerWidth + 'x' + window.outerHeight;
     }
