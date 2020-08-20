@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<style>
+  #favDialog {
+    background-color: white;
+    border-radius: 20px;
+    border-width: 1em;
+    border-color:  hsl(217, 89%, 61%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    height:200px;
+    width:300px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left: -150px;
+    margin-top:-100px;
+}
+</style>
+<head>
+
+</head>
+
+<body>
+  <!-- Simple pop-up dialog box containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <p><label>Favorite animal:
+          <select>
+            <option></option>
+            <option>Brine shrimp</option>
+            <option>Red panda</option>
+            <option>Spider monkey</option>
+          </select>
+        </label></p>
+      <menu>
+        <button value="cancel">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
+
+  <output aria-live="polite"></output>
+
+  <script src="dialog.js"></script>
+</body>
+
+</html>
