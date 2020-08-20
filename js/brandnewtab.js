@@ -21,7 +21,7 @@ function startTime() {
 }
 window.onload = function() {
     startTime();
-    setRandomWallpaperBG();
+    //setRandomWallpaperBG();
 }
 
 function setRandomGradientBG() {
@@ -67,14 +67,14 @@ function getRandomInt(min, max) {
 
 function setRandomPatternBG() {
     document.body.style = '';
-    let patternNo = getRandomInt(1,19);
+    let patternNo = getRandomInt(1,20);
     let element = document.getElementById("mainContent");
     element.removeAttribute("class");
     element.classList.add("pattern" + patternNo);
 }
 
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
-document.getElementById("bgWallpaper").addEventListener("click", refreshPage);
+document.getElementById("bgWallpaper").addEventListener("click", setRandomWallpaperBG);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
 document.getElementById("bgPattern").addEventListener("click", setRandomPatternBG);
 
