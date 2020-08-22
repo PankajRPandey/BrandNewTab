@@ -19,6 +19,7 @@ to container fixed the issue*/
     width: inherit;
     height: 100vh; /*was 90vh before*/
     box-sizing: border-box;
+    padding-top: 5vh; /*Pushes parent container towards bottom - Add an option in settings dialog for this*/
 }
 
 .child {
@@ -29,11 +30,14 @@ to container fixed the issue*/
 
 #clock {
     /*font-weight: bolder;*/
+    font-weight: 500;
     font-size: 6rem;
     text-shadow: 2px 2px #C0C0C0;
 }
 
 #greet {
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 3rem;
     text-shadow: 2px 2px #C0C0C0;
 }
