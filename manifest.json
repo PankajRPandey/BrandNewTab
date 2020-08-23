@@ -1,6 +1,6 @@
 {
   "name": "BrandNewTab",
-  "description": "A chrome extension to replace and simplify the new tab",
+  "description": "Change new tab with beautiful images, gradients, or patterns",
   "version": "1.0",
   "background": {
     "scripts": [
