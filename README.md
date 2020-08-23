@@ -6,4 +6,4 @@
   <br>
 </h1>
 
-<h4 align="center">A chrome extension to replace and simplify the new tab</h4>
+<h4 align="center">Change new tab with beautiful images, gradients, or patterns</h4>
