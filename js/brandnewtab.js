@@ -4,11 +4,11 @@ function startTime() {
     let minutes = date.getMinutes();
     let ampm = hours >= 12 ? 'PM' : 'AM';
 
-    let greet = 'GOOD MORNING';
+    let greet = 'Good morning';
     if(hours>=12 && minutes>=0 && hours<18){
-      greet = 'GOOD AFTERNOON';
+      greet = 'Good afternoon';
     }else if(hours>=18){
-        greet = 'GOOD EVENING';
+        greet = 'Good evening';
     }
 
     hours = hours % 12;
@@ -52,7 +52,7 @@ function setRandomWallpaperBG() {
         return window.outerWidth + 'x' + window.outerHeight;
     }
     let res = getScreenResolution();
-    fetch(`https://source.unsplash.com/random/${res}`).then((response) => {   
+    fetch(`https://source.unsplash.com/random/${res}/?nature`).then((response) => {   
         document.body.style.backgroundImage = `url('${response.url}')`;
     });
 }
