@@ -2,7 +2,7 @@ body {
     /*background-image: url("the_most_beautiful_road_in_the_world_2-wallpaper-1366x768.jpg");*/
     background-color: #cccccc;
     color: #fff;
-    font-family: 'Josefin Sans';
+    font-family: 'Saira Extra Condensed';
     margin :0px;
 }
 
@@ -19,7 +19,7 @@ to container fixed the issue*/
     width: inherit;
     height: 100vh; /*was 90vh before*/
     box-sizing: border-box;
-    padding-top: 5vh; /*Pushes parent container towards bottom - Add an option in settings dialog for this*/
+    /*padding-top: 5vh; Pushes parent container towards bottom - Add an option in settings dialog for this*/
 }
 
 .child {
@@ -29,17 +29,24 @@ to container fixed the issue*/
 }
 
 #clock {
-    /*font-weight: bolder;*/
+    /*font-weight: bolder;
     font-weight: 500;
     font-size: 6rem;
-    text-shadow: 2px 2px #C0C0C0;
+    text-shadow: 2px 2px #C0C0C0;*/
+
+    font-weight: 300;
+    user-select: none;
+    font-size: 1050%;
+    letter-spacing: 0px;
+    margin-bottom: -3.5rem;
+
 }
 
 #greet {
-    font-family: 'Montserrat';
+    font-family: 'Lato';
     font-weight: 500;
     font-size: 3rem;
-    text-shadow: 2px 2px #C0C0C0;
+    /*text-shadow: 2px 2px #C0C0C0;*/
 }
 
   
