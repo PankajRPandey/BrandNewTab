@@ -1,5 +1,5 @@
 var updateButton = document.getElementById('updateDetails');
-var favDialog = document.getElementById('favDialog');
+var favDialog = document.getElementById('settings');
 var outputBox = document.querySelector('output');
 var selectEl = document.querySelector('select');
 var confirmBtn = document.getElementById('confirmBtn');
