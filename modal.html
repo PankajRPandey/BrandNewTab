@@ -34,22 +34,8 @@
   border-color: hsl(217, 89%, 61%);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   height: 25vh;
-  width: 25vw;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+  width: 23vw;
+  overflow: auto; /* Enable scroll if needed */
 }
 
     /*Button*/
@@ -84,6 +70,7 @@
       float: left;
       margin: 5px 0px;
       width: 20vw; 
+      /*border-top: 1px solid rgba(0,0,0,.1)*/
   }
 
       /*Toggle*/
@@ -152,6 +139,10 @@
   
     /*x Toggle*/
 
+    .buttonDiv {
+    text-align: center;
+    }
+
 
   </style>
 </head>
@@ -190,6 +181,14 @@
         <span class="slider round"></span>
       </label></div><br>
 
+      <div>
+        <label for="DarkFont">Dark Font</label>
+        <label class="switch">
+          <input type="checkbox" id="DarkFont" value="DarkFont">
+          <span class="slider round"></span>
+        </label></div><br>
+
+      <br>
       <br>
 
     <div class="buttonDiv">
