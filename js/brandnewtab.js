@@ -6,15 +6,18 @@ var cancelBtn = document.getElementById("cancelBtn");
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
     modal.style.display = "block";
+    document.getElementById('circularMenu').classList.remove('active');
 }
 // When the user clicks on cancel button close the modal
 cancelBtn.onclick = function () {
     modal.style.display = "none";
+    document.getElementById('circularMenu').classList.add('active');
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        document.getElementById('circularMenu').classList.add('active');
     }
 }
 
