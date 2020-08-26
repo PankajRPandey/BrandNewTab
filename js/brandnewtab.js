@@ -1,3 +1,24 @@
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("settings");
+// Get the button that closes the modal
+var cancelBtn = document.getElementById("cancelBtn");
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+// When the user clicks on cancel button close the modal
+cancelBtn.onclick = function () {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
 function startTime() {
     const date = new Date();
     let hours = date.getHours();
@@ -5,9 +26,9 @@ function startTime() {
     let ampm = hours >= 12 ? 'PM' : 'AM';
 
     let greet = 'Good morning';
-    if(hours>=12 && minutes>=0 && hours<18){
-      greet = 'Good afternoon';
-    }else if(hours>=18){
+    if (hours >= 12 && minutes >= 0 && hours < 18) {
+        greet = 'Good afternoon';
+    } else if (hours >= 18) {
         greet = 'Good evening';
     }
 
@@ -19,7 +40,7 @@ function startTime() {
     document.getElementById('greet').innerHTML = greet;
     var t = setTimeout(startTime, 500);
 }
-window.onload = function() {
+window.onload = function () {
     startTime();
     //setRandomWallpaperBG();
 }
@@ -52,14 +73,14 @@ function setRandomWallpaperBG() {
         return window.outerWidth + 'x' + window.outerHeight;
     }
     let res = getScreenResolution();
-    fetch(`https://source.unsplash.com/random/${res}/?nature`).then((response) => {   
+    fetch(`https://source.unsplash.com/random/${res}/?nature`).then((response) => {
         document.body.style.backgroundImage = `url('${response.url}')`;
     });
 }
 
-function refreshPage(){
+function refreshPage() {
     window.location.reload();
-} 
+}
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -69,7 +90,7 @@ function getRandomInt(min, max) {
 
 function setRandomPatternBG() {
     document.body.style = '';
-    let patternNo = getRandomInt(1,20);
+    let patternNo = getRandomInt(1, 20);
     let element = document.getElementById("mainContent");
     element.removeAttribute("class");
     element.classList.add("pattern" + patternNo);
