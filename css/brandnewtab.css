@@ -14,7 +14,7 @@ to container fixed the issue*/
 .parent {
     display: grid;
     place-items: center;
-    width: inherit;
+    width: 100vw;
     height: 100vh; /*was 90vh before*/
     box-sizing: border-box;
     /*padding-top: 5vh; Pushes parent container towards bottom - Add an option in settings dialog for this*/
@@ -34,7 +34,7 @@ to container fixed the issue*/
 
     font-weight: 300;
     user-select: none;
-    font-size: 1050%;
+    font-size: 12vw;
     letter-spacing: 0px;
     margin-bottom: -3.5rem;
     color: #fff;
@@ -46,7 +46,7 @@ to container fixed the issue*/
     font-family: 'Lato';
     color: #fff;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 4vw;
     /*text-shadow: 2px 2px #C0C0C0;*/
 }
 
