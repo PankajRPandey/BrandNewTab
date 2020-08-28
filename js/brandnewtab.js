@@ -99,6 +99,13 @@ function setRandomPatternBG() {
     element.classList.add("pattern" + patternNo);
 }
 
+//This should execute only once
+var alreadyExecuted = false;
+if(!alreadyExecuted) {
+    setRandomGradientBG();
+    alreadyExecuted = true;
+}
+
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
 document.getElementById("bgWallpaper").addEventListener("click", setRandomWallpaperBG);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
