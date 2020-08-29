@@ -51,12 +51,12 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 1rem;
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
         font-family: Lato;
-    
+        border-radius: 0.5em;
       }
       
       .button1 {
@@ -163,12 +163,26 @@
   font-family: 'Lato';
   font-size: 4vw;
 }
+
 #name {
   font-family: 'Lato';
   color: #fff;
   font-weight: 500;
   font-size: 4vw;
 }
+
+.button2 {
+  outline: 0;
+  background: 0; 
+  color: white;
+  border: 2px solid white;
+  font-size: 1.5rem;
+}
+.button2:hover {
+  background-color: white;
+  color: black;
+}
+
 /**/
 
     
@@ -184,6 +198,7 @@
       <div id="name">
         Hey, What is your name?
         <input type="text" id="fname" name="fname">
+        <button id="saveBtn" value="save" class="button button2">Save</button>
       </div>
     </div>
   </div>
@@ -250,14 +265,10 @@
       <button id="cancelBtn" value="cancel" class="button button1">Cancel</button>
       <button id="saveBtn" value="default" class="button button1">Save</button>
     </div>
-
   </div>
-
 </div>
 
-
-
-  <script src="js/brandnewtab.js"></script>
+<script src="js/brandnewtab.js"></script>
 </body>
 
 </html>
