@@ -21,6 +21,8 @@ window.onclick = function (event) {
     }
 }
 
+var name = 'Friend';
+
 
 function startTime() {
     const date = new Date();
@@ -40,7 +42,7 @@ function startTime() {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = hours + ':' + minutes + ampm;
     document.getElementById('clock').innerHTML = strTime;
-    document.getElementById('greet').innerHTML = greet;
+    document.getElementById('greet').innerHTML = greet + ", " + name + ".";
     var t = setTimeout(startTime, 500);
 }
 window.onload = function () {
