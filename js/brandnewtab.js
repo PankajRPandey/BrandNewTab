@@ -1,3 +1,5 @@
+var name = 'Friend';
+var greet;
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("settings");
@@ -21,16 +23,13 @@ window.onclick = function (event) {
     }
 }
 
-var name = 'Friend';
-
-
 function startTime() {
     const date = new Date();
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let ampm = hours >= 12 ? 'PM' : 'AM';
 
-    let greet = 'Good morning';
+    greet = 'Good morning';
     if (hours >= 12 && minutes >= 0 && hours < 18) {
         greet = 'Good afternoon';
     } else if (hours >= 18) {
@@ -42,12 +41,21 @@ function startTime() {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = hours + ':' + minutes + ampm;
     document.getElementById('clock').innerHTML = strTime;
-    document.getElementById('greet').innerHTML = greet + ", " + name + ".";
     var t = setTimeout(startTime, 500);
 }
+
+function greetUser() {
+    if (getNameFromLS()!=null) {
+        name = getNameFromLS();
+        let rt = JSON.parse(name);
+        name = rt.name;
+    }
+    document.getElementById('greet').innerHTML = greet + ", " + name + ".";
+}
+
 window.onload = function () {
     startTime();
-    //setRandomWallpaperBG();
+    greetUser();
 }
 
 function setRandomGradientBG() {
@@ -105,12 +113,37 @@ function setRandomPatternBG() {
 var alreadyExecuted = false;
 if(!alreadyExecuted) {
     setRandomGradientBG();
+    let clockElement = document.getElementById("clock");
+    clockElement.style.display = "none";
+    let greetElement = document.getElementById("greet");
+    greetElement.style.display = "none";
     alreadyExecuted = true;
+}
+
+function saveNameInLS() {
+    let nameInp = document.getElementById("fname").value;
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("bnt_user", `{"name":"${nameInp}"}`);
+    }
+
+      greetUser();
+
+        let nameElement = document.getElementById("name");
+        nameElement.style.display = "none";
+        let clockElement = document.getElementById("clock");
+        clockElement.style.display = "block";
+        let greetElement = document.getElementById("greet");
+        greetElement.style.display = "block";
+}
+
+function getNameFromLS() {
+    return localStorage.getItem("bnt_user");
 }
 
 document.getElementById("bgGradient").addEventListener("click", setRandomGradientBG);
 document.getElementById("bgWallpaper").addEventListener("click", setRandomWallpaperBG);
 document.getElementById("floatingBtn").addEventListener("click", toggleCircularMenu);
 document.getElementById("bgPattern").addEventListener("click", setRandomPatternBG);
+document.getElementById("saveNameBtn").addEventListener("click", saveNameInLS);
 
 

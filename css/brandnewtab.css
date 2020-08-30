@@ -32,7 +32,6 @@ to container fixed the issue*/
     font-size: 6rem;
     text-shadow: 2px 2px #C0C0C0;*/
 
-    display: none;
     font-weight: 300;
     user-select: none;
     font-size: 12vw;
@@ -43,7 +42,6 @@ to container fixed the issue*/
 }
 
 #greet {
-    display: none;
     font-family: 'Lato';
     color: #fff;
     font-weight: 500;
