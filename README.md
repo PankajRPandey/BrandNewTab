@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="icons/192.png" alt="BrandNewTab" width="200">
+  <img src="icons/512.png" alt="BrandNewTab" width="200">
   <br>
   BrandNewTab
   <br>
