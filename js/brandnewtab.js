@@ -113,10 +113,21 @@ function setRandomPatternBG() {
 var alreadyExecuted = false;
 if(!alreadyExecuted) {
     setRandomGradientBG();
-    let clockElement = document.getElementById("clock");
-    clockElement.style.display = "none";
-    let greetElement = document.getElementById("greet");
-    greetElement.style.display = "none";
+    if (getNameFromLS()!=null) {
+        let clockElement = document.getElementById("clock");
+        clockElement.style.display = "block";
+        let greetElement = document.getElementById("greet");
+        greetElement.style.display = "block";
+        let nameElement = document.getElementById("name");
+        nameElement.style.display = "none";
+    }else if (getNameFromLS()==null) {
+        let clockElement = document.getElementById("clock");
+        clockElement.style.display = "none";
+        let greetElement = document.getElementById("greet");
+        greetElement.style.display = "none";
+        let nameElement = document.getElementById("name");
+        nameElement.style.display = "block";
+    }
     alreadyExecuted = true;
 }
 
@@ -126,14 +137,15 @@ function saveNameInLS() {
         localStorage.setItem("bnt_user", `{"name":"${nameInp}"}`);
     }
 
-      greetUser();
-
+    if (getNameFromLS()!=null) {
+        greetUser();
         let nameElement = document.getElementById("name");
         nameElement.style.display = "none";
         let clockElement = document.getElementById("clock");
         clockElement.style.display = "block";
         let greetElement = document.getElementById("greet");
         greetElement.style.display = "block";
+    }
 }
 
 function getNameFromLS() {
