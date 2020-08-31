@@ -33,4 +33,3 @@ Here is a working live demo : <i>TODO</i>
 
 ### Pattern as background
 ![MAC](images/7_mac_pattern_bg.png)
-![MAC](images/8_mac_pattern_bg.png)
