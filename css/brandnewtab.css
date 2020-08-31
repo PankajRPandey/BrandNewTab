@@ -208,7 +208,7 @@ to container fixed the issue*/
       display: none; /* Hidden by default */
       position: fixed; /* Stay in place */
       z-index: 1; /* Sit on top */
-      padding-top: 20%; /* Location of the box */
+      padding-top: 15%; /* Location of the box */
       left: 0;
       top: 0;
       width: 100%; /* Full width */
@@ -221,6 +221,7 @@ to container fixed the issue*/
     /* Modal Content */
     .modal-content {
       font-family: Lato;
+      font-size: 1.5em;
       background-color: #fefefe;
       margin: auto;
       padding: 20px;
@@ -230,7 +231,7 @@ to container fixed the issue*/
       border-width: 10px;
       border-color: hsl(217, 89%, 61%);
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      height: 25vh;
+      /*height: 25vh;*/
       width: 23vw;
       overflow: auto; /* Enable scroll if needed */
     }
@@ -338,6 +339,7 @@ to container fixed the issue*/
     
         .buttonDiv {
         text-align: center;
+        padding-top: 15%;
         }
 
 /*Name*/
