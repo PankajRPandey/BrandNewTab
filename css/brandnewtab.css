@@ -46,6 +46,7 @@ to container fixed the issue*/
     color: #fff;
     font-weight: 500;
     font-size: 4vw;
+    user-select: none;
     /*text-shadow: 2px 2px #C0C0C0;*/
 }
 
