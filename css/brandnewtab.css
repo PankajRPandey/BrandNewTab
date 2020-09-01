@@ -34,7 +34,7 @@ to container fixed the issue*/
 
     font-weight: 300;
     user-select: none;
-    font-size: 12vw;
+    font-size: 10.8em;
     letter-spacing: 0px;
     margin-bottom: -3.5rem;
     color: #fff;
@@ -45,7 +45,7 @@ to container fixed the issue*/
     font-family: 'Lato';
     color: #fff;
     font-weight: 500;
-    font-size: 4vw;
+    font-size: 3.5em;
     user-select: none;
     /*text-shadow: 2px 2px #C0C0C0;*/
 }
@@ -221,7 +221,7 @@ to container fixed the issue*/
     /* Modal Content */
     .modal-content {
       font-family: Lato;
-      font-size: 1.5em;
+      font-size: 1em;
       background-color: #fefefe;
       margin: auto;
       padding: 20px;
@@ -362,7 +362,7 @@ to container fixed the issue*/
   font-family: 'Lato';
   color: #fff;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: 3.5em;
 }
 
 .button2 {
