@@ -7,6 +7,8 @@ var btn = document.getElementById("settings");
 var cancelBtn = document.getElementById("cancelBtn");
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
+    var DFChecked = JSON.parse(localStorage.getItem('isFontDark'));
+    document.getElementById("DarkFont").checked = DFChecked;
     modal.style.display = "block";
     document.getElementById('circularMenu').classList.remove('active');
 }
@@ -15,6 +17,14 @@ cancelBtn.onclick = function () {
     modal.style.display = "none";
     document.getElementById('circularMenu').classList.add('active');
 }
+
+// When the user clicks on Save button, save all the settings
+saveBtn.onclick = function () {
+    var darkFont = document.getElementById('DarkFont');
+    localStorage.setItem('isFontDark', checkbox.checked);
+    modal.style.display = "none";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
