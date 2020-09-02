@@ -21,7 +21,7 @@ cancelBtn.onclick = function () {
 // When the user clicks on Save button, save all the settings
 saveBtn.onclick = function () {
     var darkFont = document.getElementById('DarkFont');
-    localStorage.setItem('isFontDark', checkbox.checked);
+    localStorage.setItem('isFontDark', darkFont.checked);
     modal.style.display = "none";
 }
 
