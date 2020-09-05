@@ -7,7 +7,7 @@ var btn = document.getElementById("settings");
 var cancelBtn = document.getElementById("cancelBtn");
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
-    loadAndApplyDarkFont();
+    //loadAndApplyDarkFont();
     modal.style.display = "block";
     document.getElementById('circularMenu').classList.remove('active');
 }
@@ -34,11 +34,25 @@ window.onclick = function (event) {
 function loadAndApplyDarkFont() {
     var DFChecked = JSON.parse(localStorage.getItem('isFontDark'));
     document.getElementById("DarkFont").checked = DFChecked;
+    if (DFChecked) {
+        document.getElementById('clock').style.color = '#000000';
+        document.getElementById('greet').style.color = '#000000';
+    } else {
+        document.getElementById('clock').style.color = '#ffffff';
+        document.getElementById('greet').style.color = '#ffffff';
+    }
 }
 
 function saveDarkFontStateInLS() {
     var darkFont = document.getElementById('DarkFont');
     localStorage.setItem('isFontDark', darkFont.checked);
+    if (darkFont.checked) {
+        document.getElementById('clock').style.color = '#000000';
+        document.getElementById('greet').style.color = '#000000';
+    } else {
+        document.getElementById('clock').style.color = '#ffffff';
+        document.getElementById('greet').style.color = '#ffffff';
+    }
 }
 
 function startTime() {
@@ -73,6 +87,7 @@ function greetUser() {
 }
 
 window.onload = function () {
+    loadAndApplyDarkFont();
     startTime();
 }
 
