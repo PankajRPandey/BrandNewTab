@@ -19,17 +19,33 @@
 ## Demo
 Here is a working live demo : <i>TODO</i>
 
+## Try this extension in developer mode
+
+Follow these steps to run BrandNewTab in Google Chrome or latest Microsoft Edge  as a developer.
+
+- Clone this repo or Download & unzip repo
+- Open the url chrome://extensions/ in Google Chrome or edge://extensions/ in Microsoft Edge.
+- Click on _Developer mode_ toggle button so that you can see developer options.
+- Click on the **Load unpacked** button
+- Browse to the location where this repo (BrandNewTab folder) is saved/cloned and select it as the extension directory.
+
 ## Screenshots
 
 ### Gradient as background
 ![INTRO](images/1_win_gradient_bg.png)
+
 ![INPUT](images/2_win_gradient_bg.png)
+
 ![CLOCK/GREET](images/3_win_gradient_bg.png)
 
 ### Image as background
 ![MAIN](images/4_win_image_bg.png)
+
 ![MAC](images/5_mac_image_bg.png)
+
 ![MAC](images/6_mac_image_bg.png)
+
 
 ### Pattern as background
 ![MAC](images/7_mac_pattern_bg.png)
+
