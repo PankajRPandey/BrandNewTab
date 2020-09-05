@@ -7,8 +7,7 @@ var btn = document.getElementById("settings");
 var cancelBtn = document.getElementById("cancelBtn");
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
-    var DFChecked = JSON.parse(localStorage.getItem('isFontDark'));
-    document.getElementById("DarkFont").checked = DFChecked;
+    loadAndApplyDarkFont();
     modal.style.display = "block";
     document.getElementById('circularMenu').classList.remove('active');
 }
@@ -20,8 +19,7 @@ cancelBtn.onclick = function () {
 
 // When the user clicks on Save button, save all the settings
 saveBtn.onclick = function () {
-    var darkFont = document.getElementById('DarkFont');
-    localStorage.setItem('isFontDark', darkFont.checked);
+    saveDarkFontStateInLS();
     modal.style.display = "none";
 }
 
@@ -31,6 +29,16 @@ window.onclick = function (event) {
         modal.style.display = "none";
         document.getElementById('circularMenu').classList.add('active');
     }
+}
+
+function loadAndApplyDarkFont() {
+    var DFChecked = JSON.parse(localStorage.getItem('isFontDark'));
+    document.getElementById("DarkFont").checked = DFChecked;
+}
+
+function saveDarkFontStateInLS() {
+    var darkFont = document.getElementById('DarkFont');
+    localStorage.setItem('isFontDark', darkFont.checked);
 }
 
 function startTime() {
