@@ -1,5 +1,6 @@
 var name = 'Friend';
 var greet;
+var imagesIntervalID = 0;
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("settings");
@@ -20,6 +21,7 @@ cancelBtn.onclick = function () {
 // When the user clicks on Save button, save all the settings
 saveBtn.onclick = function () {
     saveDarkFontStateInLS();
+    saveAutoImagesStateInLS();
     modal.style.display = "none";
 }
 
@@ -52,6 +54,30 @@ function saveDarkFontStateInLS() {
     } else {
         document.getElementById('clock').style.color = '#ffffff';
         document.getElementById('greet').style.color = '#ffffff';
+    }
+}
+
+function loadImagesAutomatically() {
+    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
+    document.getElementById("AutoImages").checked = autoImagesChecked;
+    if (autoImagesChecked) {
+        imagesIntervalID = setInterval(setRandomWallpaperBG, 15000);
+    } else if (!(autoImagesChecked)) {
+        console.log('setRandomWallpaperBG stopped.');
+        clearInterval(imagesIntervalID);
+    }
+}
+
+
+function saveAutoImagesStateInLS() {
+    var autoImages = document.getElementById('AutoImages');
+    localStorage.setItem('setImagesAuto', autoImages.checked);
+    
+    if (autoImages.checked) {
+        imagesIntervalID = setInterval(setRandomWallpaperBG, 15000);
+    } else if (!(autoImages.checked)) {
+        console.log('setRandomWallpaperBG stopped.');
+        clearInterval(imagesIntervalID);
     }
 }
 
@@ -88,6 +114,7 @@ function greetUser() {
 
 window.onload = function () {
     loadAndApplyDarkFont();
+    loadImagesAutomatically();
     startTime();
 }
 
@@ -113,6 +140,7 @@ function toggleCircularMenu() {
 }
 
 function setRandomWallpaperBG() {
+    console.log('setRandomWallpaperBG executed.');
     let element = document.getElementById("mainContent");
     element.removeAttribute("class");
     function getScreenResolution() {
