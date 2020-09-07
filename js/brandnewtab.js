@@ -80,6 +80,45 @@ function saveAutoImagesStateInLS() {
         clearInterval(imagesIntervalID);
     }
 }
+/** ------------------------------------------------------------------------------------- */
+function loadImagesAutomatically() {
+    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
+    document.getElementById("AutoImages").checked = autoImagesChecked;
+
+}
+
+function saveAutoImagesStateInLS() {
+    var autoImages = document.getElementById('AutoImages');
+    localStorage.setItem('setImagesAuto', autoImages.checked);
+
+}
+
+function loadImagesAutomatically() {
+    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
+    document.getElementById("AutoImages").checked = autoImagesChecked;
+
+}
+
+function saveAutoImagesStateInLS() {
+    var autoImages = document.getElementById('AutoImages');
+    localStorage.setItem('setImagesAuto', autoImages.checked);
+
+}
+
+function loadImagesAutomatically() {
+    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
+    document.getElementById("AutoImages").checked = autoImagesChecked;
+
+}
+
+function saveAutoImagesStateInLS() {
+    var autoImages = document.getElementById('AutoImages');
+    localStorage.setItem('setImagesAuto', autoImages.checked);
+
+}
+
+/** ------------------------------------------------------------------------------------- */
+
 
 function startTime() {
     const date = new Date();
