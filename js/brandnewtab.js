@@ -81,37 +81,37 @@ function saveAutoImagesStateInLS() {
     }
 }
 /** ------------------------------------------------------------------------------------- */
-function loadImagesAutomatically() {
+function loadIGradientsAutomatically() {
     var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
     document.getElementById("AutoImages").checked = autoImagesChecked;
 
 }
 
-function saveAutoImagesStateInLS() {
+function saveAutoGradientsStateInLS() {
     var autoImages = document.getElementById('AutoImages');
     localStorage.setItem('setImagesAuto', autoImages.checked);
 
 }
 
-function loadImagesAutomatically() {
+function loadPatternsAutomatically() {
     var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
     document.getElementById("AutoImages").checked = autoImagesChecked;
 
 }
 
-function saveAutoImagesStateInLS() {
+function saveAutoPatternsStateInLS() {
     var autoImages = document.getElementById('AutoImages');
     localStorage.setItem('setImagesAuto', autoImages.checked);
 
 }
 
-function loadImagesAutomatically() {
+function loadDarkImagesAutomatically() {
     var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
     document.getElementById("AutoImages").checked = autoImagesChecked;
 
 }
 
-function saveAutoImagesStateInLS() {
+function saveDarkImagesStateInLS() {
     var autoImages = document.getElementById('AutoImages');
     localStorage.setItem('setImagesAuto', autoImages.checked);
 
