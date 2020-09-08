@@ -1,6 +1,7 @@
 var name = 'Friend';
 var greet;
 var imagesIntervalID = 0;
+var gradientsIntervalID = 0;
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("settings");
@@ -22,6 +23,7 @@ cancelBtn.onclick = function () {
 saveBtn.onclick = function () {
     saveDarkFontStateInLS();
     saveAutoImagesStateInLS();
+    saveAutoGradientsStateInLS();
     modal.style.display = "none";
 }
 
@@ -81,16 +83,26 @@ function saveAutoImagesStateInLS() {
     }
 }
 /** ------------------------------------------------------------------------------------- */
-function loadIGradientsAutomatically() {
-    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
-    document.getElementById("AutoImages").checked = autoImagesChecked;
-
+function loadGradientsAutomatically() {
+    var autoGradientsChecked = JSON.parse(localStorage.getItem('setGradientsAuto'));
+    document.getElementById("AutoGradients").checked = autoGradientsChecked;
+    if (autoGradientsChecked) {
+        gradientsIntervalID = setInterval(setRandomGradientBG, 15000);
+    } else if (!(autoGradientsChecked)) {
+        console.log('setRandomGradientBG stopped.');
+        clearInterval(gradientsIntervalID);
+    }
 }
 
 function saveAutoGradientsStateInLS() {
-    var autoImages = document.getElementById('AutoImages');
-    localStorage.setItem('setImagesAuto', autoImages.checked);
-
+    var autoGradients = document.getElementById('AutoGradients');
+    localStorage.setItem('setGradientsAuto', autoGradients.checked);
+    if (autoGradients.checked) {
+        gradientsIntervalID = setInterval(setRandomGradientBG, 15000);
+    } else if (!(autoGradients.checked)) {
+        console.log('setRandomGradientBG stopped.');
+        clearInterval(gradientsIntervalID);
+    }
 }
 
 function loadPatternsAutomatically() {
@@ -154,6 +166,7 @@ function greetUser() {
 window.onload = function () {
     loadAndApplyDarkFont();
     loadImagesAutomatically();
+    loadGradientsAutomatically();
     startTime();
 }
 
