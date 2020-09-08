@@ -2,6 +2,7 @@ var name = 'Friend';
 var greet;
 var imagesIntervalID = 0;
 var gradientsIntervalID = 0;
+var patternsIntervalID = 0;
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("settings");
@@ -24,6 +25,7 @@ saveBtn.onclick = function () {
     saveDarkFontStateInLS();
     saveAutoImagesStateInLS();
     saveAutoGradientsStateInLS();
+    saveAutoPatternsStateInLS();
     modal.style.display = "none";
 }
 
@@ -106,15 +108,25 @@ function saveAutoGradientsStateInLS() {
 }
 
 function loadPatternsAutomatically() {
-    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
-    document.getElementById("AutoImages").checked = autoImagesChecked;
-
+    var autoPatternsChecked = JSON.parse(localStorage.getItem('setPatternsAuto'));
+    document.getElementById("AutoPatterns").checked = autoPatternsChecked;
+    if (autoPatternsChecked) {
+        patternsIntervalID = setInterval(setRandomPatternBG, 15000);
+    } else if (!(autoPatternsChecked)) {
+        console.log('setRandomPatternBG stopped.');
+        clearInterval(patternsIntervalID);
+    }
 }
 
 function saveAutoPatternsStateInLS() {
-    var autoImages = document.getElementById('AutoImages');
-    localStorage.setItem('setImagesAuto', autoImages.checked);
-
+    var autoPatterns = document.getElementById('AutoPatterns');
+    localStorage.setItem('setPatternsAuto', autoPatterns.checked);
+    if (autoPatterns.checked) {
+        patternsIntervalID = setInterval(setRandomPatternBG, 15000);
+    } else if (!(autoPatterns.checked)) {
+        console.log('setRandomPatternBG stopped.');
+        clearInterval(patternsIntervalID);
+    }
 }
 
 function loadDarkImagesAutomatically() {
@@ -167,6 +179,7 @@ window.onload = function () {
     loadAndApplyDarkFont();
     loadImagesAutomatically();
     loadGradientsAutomatically();
+    loadPatternsAutomatically();
     startTime();
 }
 
