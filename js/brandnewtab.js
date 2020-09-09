@@ -3,6 +3,8 @@ var greet;
 var imagesIntervalID = 0;
 var gradientsIntervalID = 0;
 var patternsIntervalID = 0;
+var darkImagesIntervalID = 0;
+
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("settings");
@@ -36,6 +38,8 @@ window.onclick = function (event) {
         document.getElementById('circularMenu').classList.add('active');
     }
 }
+
+/** ------------------------------------------------------------------------------------- */
 
 function loadAndApplyDarkFont() {
     var DFChecked = JSON.parse(localStorage.getItem('isFontDark'));
@@ -84,7 +88,7 @@ function saveAutoImagesStateInLS() {
         clearInterval(imagesIntervalID);
     }
 }
-/** ------------------------------------------------------------------------------------- */
+
 function loadGradientsAutomatically() {
     var autoGradientsChecked = JSON.parse(localStorage.getItem('setGradientsAuto'));
     document.getElementById("AutoGradients").checked = autoGradientsChecked;
@@ -130,14 +134,14 @@ function saveAutoPatternsStateInLS() {
 }
 
 function loadDarkImagesAutomatically() {
-    var autoImagesChecked = JSON.parse(localStorage.getItem('setImagesAuto'));
-    document.getElementById("AutoImages").checked = autoImagesChecked;
+    var autoDarkImagesChecked = JSON.parse(localStorage.getItem('setDarkImagesAuto'));
+    document.getElementById("DarkImages").checked = autoDarkImagesChecked;
 
 }
 
 function saveDarkImagesStateInLS() {
-    var autoImages = document.getElementById('AutoImages');
-    localStorage.setItem('setImagesAuto', autoImages.checked);
+    var autoDarkImages = document.getElementById('DarkImages');
+    localStorage.setItem('setDarkImagesAuto', autoDarkImages.checked);
 
 }
 

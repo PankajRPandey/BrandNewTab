@@ -34,7 +34,7 @@ to container fixed the issue*/
 
     font-weight: 300;
     user-select: none;
-    font-size: 10.8em;
+    font-size: 12vw;
     letter-spacing: 0px;
     margin-bottom: -3.5rem;
     color: #fff;
@@ -45,7 +45,7 @@ to container fixed the issue*/
     font-family: 'Lato';
     color: #fff;
     font-weight: 500;
-    font-size: 3.5em;
+    font-size: 4vw;
     user-select: none;
     /*text-shadow: 2px 2px #C0C0C0;*/
 }
@@ -362,7 +362,7 @@ to container fixed the issue*/
   font-family: 'Lato';
   color: #fff;
   font-weight: 500;
-  font-size: 3.5em;
+  font-size: 4vw;
 }
 
 .button2 {
