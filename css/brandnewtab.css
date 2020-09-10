@@ -4,6 +4,11 @@ body {
     margin :0px;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*90vh was causing issue with the bg
 as the container size was small the bg 
 color gradient appeared to 90% of viewport 
