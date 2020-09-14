@@ -16,8 +16,8 @@
 
 </h1>
 
-## Demo
-Here is a working live demo : <i>TODO</i>
+## Demo 
+Here is a working live demo : [Brand New Tab](https://pankajrpandey.github.io/BrandNewTab/) 
 
 ## Try this extension in developer mode
 
