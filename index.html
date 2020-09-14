@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brand New Tab</title>
+  <link rel="shortcut icon" type="image/png" href="icons/16.png"/>
+  <link rel="stylesheet" href="css/brandnewtab.css">
+  <link rel="stylesheet" href="css/patterns.css">
+  <link href="https://fonts.googleapis.com/css?family=Saira Extra Condensed" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="mainContent" class="">
+  <div class="parent">
+    <div class="child">
+      <div id="clock"></div>
+      <div id="greet"></div>
+      <div id="name">
+        Hey, What is your name?
+        <input type="text" id="fname" name="fname">
+        <button id="saveNameBtn" value="save" class="button button2">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!--
+        CIRCULAR MENU
+    -->
+  <div id="circularMenu" class="circular-menu circular-menu-left">
+
+    <a class="floating-btn" id="floatingBtn">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <menu class="items-wrapper">
+      <a id="bgGradient" class="menu-item fa fa-paint-brush"></a>
+      <a id="bgWallpaper" class="menu-item fa fa-picture-o"></a>
+      <a id="bgPattern" class="menu-item fa fa-heart"></a>
+      <a id="settings" class="menu-item fa fa-cog"></a>
+    </menu>
+
+  </div>
+  <!--
+        CIRCULAR MENU
+    -->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div>
+        <label for="AutoGradients">Change Gradients automatically</label>
+        <label class="switch">
+          <input type="checkbox" id="AutoGradients" value="AutoGradients">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <br/>
+
+      <div>
+        <label for="AutoImages">Change Images automatically</label>
+        <label class="switch">
+          <input type="checkbox" id="AutoImages" value="AutoImages">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <br/>
+
+      <div>
+        <label for="AutoPatterns">Change Patterns automatically</label>
+        <label class="switch">
+          <input type="checkbox" id="AutoPatterns" value="AutoPatterns">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <br/>
+
+      <div>
+        <label for="DarkFont">Dark Font</label>
+        <label class="switch">
+          <input type="checkbox" id="DarkFont" value="DarkFont">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <br/>
+
+      <div>
+        <label for="DarkImages">Only Dark Images</label>
+        <label class="switch">
+          <input type="checkbox" id="DarkImages" value="DarkImages">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <br/>
+
+      <br>
+      <br>
+
+      <div class="buttonDiv">
+        <button id="cancelBtn" value="cancel" class="button button1">Cancel</button>
+        <button id="saveBtn" value="default" class="button button1">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/brandnewtab.js"></script>
+</body>
+
+</html>
