@@ -26,6 +26,7 @@ cancelBtn.onclick = function () {
 saveBtn.onclick = function () {
     saveDarkFontStateInLS();
     saveAutoImagesStateInLS();
+    saveDarkImagesStateInLS();
     saveAutoGradientsStateInLS();
     saveAutoPatternsStateInLS();
     modal.style.display = "none";
@@ -137,11 +138,25 @@ function loadDarkImagesAutomatically() {
     var autoDarkImagesChecked = JSON.parse(localStorage.getItem('setDarkImagesAuto'));
     document.getElementById("DarkImages").checked = autoDarkImagesChecked;
 
+    if (autoDarkImagesChecked) {
+        darkImagesIntervalID = setInterval(setDarkWallpaperBG, 15000);
+    } else if (!(autoDarkImagesChecked)) {
+        console.log('setDarkWallpaperBG stopped.');
+        clearInterval(darkImagesIntervalID);
+    }
+
 }
 
 function saveDarkImagesStateInLS() {
     var autoDarkImages = document.getElementById('DarkImages');
     localStorage.setItem('setDarkImagesAuto', autoDarkImages.checked);
+    
+    if (autoDarkImages.checked) {
+        darkImagesIntervalID = setInterval(setDarkWallpaperBG, 15000);
+    } else if (!(autoDarkImages.checked)) {
+        console.log('setDarkWallpaperBG stopped.');
+        clearInterval(darkImagesIntervalID);
+    }
 
 }
 
@@ -182,6 +197,7 @@ function greetUser() {
 window.onload = function () {
     loadAndApplyDarkFont();
     loadImagesAutomatically();
+    loadDarkImagesAutomatically();
     loadGradientsAutomatically();
     loadPatternsAutomatically();
     startTime();
@@ -209,7 +225,6 @@ function toggleCircularMenu() {
 }
 
 function setRandomWallpaperBG() {
-    console.log('setRandomWallpaperBG executed.');
     let element = document.getElementById("mainContent");
     element.removeAttribute("class");
     function getScreenResolution() {
@@ -217,6 +232,19 @@ function setRandomWallpaperBG() {
     }
     let res = getScreenResolution();
     fetch(`https://source.unsplash.com/random/${res}/?nature`).then((response) => {
+        document.body.style.backgroundImage = `url('${response.url}')`;
+    });
+}
+
+function setDarkWallpaperBG() {
+    console.log('setRandomWallpaperBG executed.');
+    let element = document.getElementById("mainContent");
+    element.removeAttribute("class");
+    function getScreenResolution() {
+        return window.outerWidth + 'x' + window.outerHeight;
+    }
+    let res = getScreenResolution();
+    fetch(`https://source.unsplash.com/random/${res}/?dark,black,nature`).then((response) => {
         document.body.style.backgroundImage = `url('${response.url}')`;
     });
 }
