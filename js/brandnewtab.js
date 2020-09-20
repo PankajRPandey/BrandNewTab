@@ -218,6 +218,7 @@ function setRandomGradientBG() {
     let angle = Math.round(Math.random() * 360);
     let gradient = "linear-gradient(" + angle + "deg, " + newColor1 + ", " + newColor2 + ")";
     document.body.style.background = gradient;
+    //document.body.style.transition = 'background 1s ease-in-out';
 }
 
 function toggleCircularMenu() {
