@@ -201,6 +201,26 @@ window.onload = function () {
     loadGradientsAutomatically();
     loadPatternsAutomatically();
     startTime();
+
+    const pattern = trianglify({
+        cellSize: 75,
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+  
+  var m = new XMLSerializer().serializeToString(pattern.toSVG());
+  
+  // Perform the base64 encoding of the String
+  var k = window.btoa(m);
+  
+  // Query the element to set the background image property
+  var element = document.getElementsByTagName('body')[0];
+  
+  // Set the background image property, including the encoding type header
+  element.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+  
+
+
 }
 
 function setRandomGradientBG() {
