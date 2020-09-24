@@ -81,7 +81,7 @@ function loadImagesAutomatically() {
 function saveAutoImagesStateInLS() {
     var autoImages = document.getElementById('AutoImages');
     localStorage.setItem('setImagesAuto', autoImages.checked);
-    
+
     if (autoImages.checked) {
         imagesIntervalID = setInterval(setRandomWallpaperBG, 15000);
     } else if (!(autoImages.checked)) {
@@ -150,7 +150,7 @@ function loadDarkImagesAutomatically() {
 function saveDarkImagesStateInLS() {
     var autoDarkImages = document.getElementById('DarkImages');
     localStorage.setItem('setDarkImagesAuto', autoDarkImages.checked);
-    
+
     if (autoDarkImages.checked) {
         darkImagesIntervalID = setInterval(setDarkWallpaperBG, 15000);
     } else if (!(autoDarkImages.checked)) {
@@ -186,7 +186,7 @@ function startTime() {
 }
 
 function greetUser() {
-    if (getNameFromLS()!=null) {
+    if (getNameFromLS() != null) {
         name = getNameFromLS();
         let rt = JSON.parse(name);
         name = rt.name;
@@ -201,26 +201,6 @@ window.onload = function () {
     loadGradientsAutomatically();
     loadPatternsAutomatically();
     startTime();
-
-    const pattern = trianglify({
-        cellSize: 75,
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
-  
-  var m = new XMLSerializer().serializeToString(pattern.toSVG());
-  
-  // Perform the base64 encoding of the String
-  var k = window.btoa(m);
-  
-  // Query the element to set the background image property
-  var element = document.getElementsByTagName('body')[0];
-  
-  // Set the background image property, including the encoding type header
-  element.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-  
-
-
 }
 
 function setRandomGradientBG() {
@@ -281,25 +261,41 @@ function getRandomInt(min, max) {
 }
 
 function setRandomPatternBG() {
-    document.body.style = '';
-    let patternNo = getRandomInt(1, 20);
-    let element = document.getElementById("mainContent");
-    element.removeAttribute("class");
-    element.classList.add("pattern" + patternNo);
+
+    // document.body.style = '';
+    // let patternNo = getRandomInt(1, 20);
+    // let element = document.getElementById("mainContent");
+    // element.removeAttribute("class");
+    // element.classList.add("pattern" + patternNo);
+
+    const pattern = trianglify({
+        cellSize: 75,
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    //Serialize the svg
+    var m = new XMLSerializer().serializeToString(pattern.toSVG());
+    // Perform the base64 encoding of the String
+    var k = window.btoa(m);
+    // Query the element to set the background image property
+    var element = document.getElementsByTagName('body')[0];
+    // Set the background image property, including the encoding type header
+    element.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+
 }
 
 //This should execute only once
 var alreadyExecuted = false;
-if(!alreadyExecuted) {
+if (!alreadyExecuted) {
     setRandomGradientBG();
-    if (getNameFromLS()!=null) {
+    if (getNameFromLS() != null) {
         let clockElement = document.getElementById("clock");
         clockElement.style.display = "block";
         let greetElement = document.getElementById("greet");
         greetElement.style.display = "block";
         let nameElement = document.getElementById("name");
         nameElement.style.display = "none";
-    }else if (getNameFromLS()==null) {
+    } else if (getNameFromLS() == null) {
         let clockElement = document.getElementById("clock");
         clockElement.style.display = "none";
         let greetElement = document.getElementById("greet");
@@ -312,11 +308,11 @@ if(!alreadyExecuted) {
 
 function saveNameInLS() {
     let nameInp = document.getElementById("fname").value;
-    if (typeof(Storage) !== "undefined") {
+    if (typeof (Storage) !== "undefined") {
         localStorage.setItem("bnt_user", `{"name":"${nameInp}"}`);
     }
 
-    if (getNameFromLS()!=null) {
+    if (getNameFromLS() != null) {
         greetUser();
         let nameElement = document.getElementById("name");
         nameElement.style.display = "none";
