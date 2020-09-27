@@ -29,7 +29,16 @@
         </style>
 </head>
 <body>
-    <input type="text" name="search" placeholder="Search..">
+    <input type="text" name="searchBox" id="searchBox" placeholder="Search.." autocomplete="off">
 
+    <script>
+      var searchBox = document.getElementById("searchBox");
+      searchBox.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+         event.preventDefault();
+         window.open('http://www.google.com/search?q=' + escape(searchBox.value));
+        }
+      });
+      </script>
 </body>
 </html>
