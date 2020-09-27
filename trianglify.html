@@ -37,6 +37,7 @@
         if (event.keyCode === 13) {
          event.preventDefault();
          window.open('http://www.google.com/search?q=' + escape(searchBox.value));
+         searchBox.value = ''; 
         }
       });
       </script>
