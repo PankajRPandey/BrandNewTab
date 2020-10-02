@@ -350,7 +350,7 @@ to container fixed the issue*/
         }
 
 /*Name*/
-  input[type=text] {
+  #fname {
   display: block;
   background: 0;
   color: white;
@@ -385,3 +385,4 @@ to container fixed the issue*/
 }
 
 /**/
+
