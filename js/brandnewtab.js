@@ -171,7 +171,7 @@ function startTime() {
 
     greet = 'Hello';
 
-    if (hours >= 5 && minutes >= 0 && hours <= 12 ) {
+    if (hours >= 5 && minutes >= 0 && hours < 12 ) {
         greet = 'Good morning';
     } else if (hours >= 12 && minutes >= 0 && hours < 18) {
         greet = 'Good afternoon';
