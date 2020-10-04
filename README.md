@@ -9,7 +9,17 @@
 
 <h4 align="center">
 
-**Change new tab with beautiful images, gradients, or patterns** </h4>
+**Change new tab with beautiful images, gradients, or patterns** 
+
+<p align="center"> 
+
+[![Google Chrome](https://img.shields.io/badge/Chrome-%234387f4?style=for-the-badge&logo=google-chrome&logoColor=white)]() 
+[![Mozilla Firefox](https://img.shields.io/badge/firefox-%234387f4?style=for-the-badge&logo=firefox-browser&logoColor=white)]() 
+[![Microsoft Edge](https://img.shields.io/badge/edge-%234387f4?style=for-the-badge&logo=microsoft-edge&logoColor=white)]()
+
+</p>
+
+</h4>
 
 <h1/>
 
