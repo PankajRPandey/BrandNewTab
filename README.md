@@ -70,5 +70,10 @@ Here is a working live demo : [Brand New Tab](https://pankajrpandey.github.io/Br
 
 
 ### Pattern as background
-![MAC](images/7_mac_pattern_bg.png)
+![MAC](images/7_mac_pattern_bg_mff.png)
+
+![DARK-FONT](images/8_mac_pattern_bg_gc.png)
+
+![SETTINGS](images/9_win_pattern_bg_me.png)
+
 
