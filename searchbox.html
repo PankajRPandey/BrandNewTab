@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+
+  <style>
+    #searchBox {
+      width: 0.5vw;
+      color: white;
+      box-sizing: border-box;
+      border: none transparent;
+      /* border: 2px solid white; */
+      border-radius: 2vw;
+      font-size: 16px;
+      font-family: 'Lato';
+      background-color: hsl(217, 89%, 61%);
+      background-image: url('./icons/g-500.png');
+      background-size: 20px;
+      background-position: 19px 19px;
+      background-repeat: no-repeat;
+      padding: 18px 30px 18px 28px;
+      transition: width 0.4s ease-in-out;
+    }
+
+    #searchBox:focus {
+  padding-left: 40px;
+  width: 20%;
+  outline: none;
+}
+
+.searchContainer {
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  right: 2em;
+}
+  </style>
+</head>
+
+<body>
+  <div id="searchContainer" class="searchContainer">
+    <input type="text" name="searchBox" id="searchBox" autocomplete="off">
+  </div>
+  <script>
+    var searchBox = document.getElementById("searchBox");
+    searchBox.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        window.open('http://www.google.com/search?q=' + escape(searchBox.value));
+        searchBox.value = '';
+      }
+    });
+  </script>
+</body>
+
+</html>
