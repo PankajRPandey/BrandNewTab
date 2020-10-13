@@ -13,9 +13,9 @@
 
 <p align="center"> 
 
-[![Google Chrome](https://img.shields.io/badge/Chrome-%234387f4?style=for-the-badge&logo=google-chrome&logoColor=white)]() 
-[![Mozilla Firefox](https://img.shields.io/badge/firefox-%234387f4?style=for-the-badge&logo=firefox-browser&logoColor=white)]() 
-[![Microsoft Edge](https://img.shields.io/badge/edge-%234387f4?style=for-the-badge&logo=microsoft-edge&logoColor=white)]()
+[![Google Chrome](https://img.shields.io/badge/Chrome-%234387f4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
+[![Mozilla Firefox](https://img.shields.io/badge/firefox-%234387f4?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
+[![Microsoft Edge](https://img.shields.io/badge/edge-%234387f4?style=for-the-badge&logo=microsoft-edge&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/)
 
 </p>
 
