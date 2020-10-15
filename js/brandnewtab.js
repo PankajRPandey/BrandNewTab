@@ -293,7 +293,7 @@ function setRandomPatternBG() {
 //This should execute only once
 var alreadyExecuted = false;
 if (!alreadyExecuted) {
-    setRandomGradientBG();
+    setRandomPatternBG();
     if (getNameFromLS() != null) {
         let clockElement = document.getElementById("clock");
         clockElement.style.display = "block";
