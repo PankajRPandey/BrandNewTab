@@ -33,7 +33,7 @@ to container fixed the issue*/
     text-align: center;
 }
 
-#clock {
+.clock {
     /*font-weight: bolder;
     font-weight: 500;
     font-size: 6rem;
@@ -48,7 +48,7 @@ to container fixed the issue*/
     font-family: 'Saira Extra Condensed';
 }
 
-#greet {
+.greet {
     font-family: 'Lato';
     color: #fff;
     font-weight: 500;
