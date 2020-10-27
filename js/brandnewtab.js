@@ -83,7 +83,7 @@ function saveAutoImagesStateInLS() {
     localStorage.setItem('setImagesAuto', autoImages.checked);
 
     if (autoImages.checked) {
-        imagesIntervalID = setInterval(setRandomWallpaperBG, 15000);
+        imagesIntervalID = setInterval(setRandomWallpaperBG, 3600000);
     } else if (!(autoImages.checked)) {
         console.log('setRandomWallpaperBG stopped.');
         clearInterval(imagesIntervalID);
