@@ -1,33 +1,14 @@
-<h1 align="center">
-  <br>
-  <img src="icons/512.png" alt="BrandNewTab" width="200">
-  <br> 
-  
-  **BrandNewTab**
-  <br>
-</h1>
+<h2 align="center">
+  <img src="images/BrandNewTab.png" alt="BrandNewTab">
+</h2>
 
-<h4 align="center">
-
-**Change new tab with beautiful images, gradients, or patterns** 
-
-<p align="center"> 
+<h2 align="center"> 
 
 [![Google Chrome](https://img.shields.io/badge/Chrome-%234387f4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
 [![Mozilla Firefox](https://img.shields.io/badge/firefox-%234387f4?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
 [![Microsoft Edge](https://img.shields.io/badge/edge-%234387f4?style=for-the-badge&logo=microsoft-edge&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/)
 
-</p>
-
-</h4>
-
-<h1/>
-
-<h1 align="center">
-
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://pankajrpandey.github.io/BrandNewTab/) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://pankajrpandey.github.io/BrandNewTab/) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://pankajrpandey.github.io/BrandNewTab/)
-
-</h1>
+</h2>
 
 ## Demo 
 Here is a working live demo : [Brand New Tab](https://pankajrpandey.github.io/BrandNewTab/) 
