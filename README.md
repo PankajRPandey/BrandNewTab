@@ -1,14 +1,16 @@
-<h2 align="center">
+<h3 align="center">
   <img src="images/BrandNewTab.png" alt="BrandNewTab">
-</h2>
+</h3>
 
-<h2 align="center"> 
+<h3 align="center"> 
 
 [![Google Chrome](https://img.shields.io/badge/Chrome-%234387f4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
 [![Mozilla Firefox](https://img.shields.io/badge/firefox-%234387f4?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/) 
 [![Microsoft Edge](https://img.shields.io/badge/edge-%234387f4?style=for-the-badge&logo=microsoft-edge&logoColor=white)](https://pankajrpandey.github.io/BrandNewTab/)
 
-</h2>
+</h3>
+
+<br/>
 
 ## Demo 
 Here is a working live demo : [Brand New Tab](https://pankajrpandey.github.io/BrandNewTab/) 
