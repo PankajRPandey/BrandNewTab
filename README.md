@@ -60,3 +60,11 @@ Here is a working live demo : [Brand New Tab](https://pankajrpandey.github.io/Br
 ![SETTINGS](images/9_win_pattern_bg_me.png)
 
 
+## Libraries used and Credits
+
+- [Trianglify](https://github.com/qrohlf/trianglify) for Backgroud Traingle patterns
+- [Shields.io](https://github.com/badges/shields) for badges
+- [Socialify](https://github.com/wei/socialify) for cool project banner
+
+
+
